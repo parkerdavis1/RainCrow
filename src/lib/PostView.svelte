@@ -15,10 +15,17 @@
   // Services
   import { _ } from '../services/i18n';
 
-  //Clipboard stuff, move elsewhere
+  // Clipboard stuff, move elsewhere
   let weatherCopy = '';
   let copyButtonText = $_('clipboard.copy')
   let copyButtonDisabled = false;
+
+  $: {
+    if ($language) {
+      getWeatherHandler()
+    }
+  }
+
   $: if($postStatus === 'loading') {
     copyButtonDisabled = false;
     copyButtonText = $_('clipboard.copy')
@@ -46,56 +53,13 @@
   } 
 
   // State
-
   let checklistId = '';
   let checklistInfo = {};
 
   let weatherDisplayText;
 
-  // $: {
-  //   $postParsedWeatherArr = Object.entries($postParsedWeather);
-  //   weatherCopy = '';
-  //   $postParsedWeatherArr.forEach(([key, value]) => {
-
-  //     if (activeOptionsArr.includes(key)) {
-  //       if(key === 'temperature') {
-  //         if (temperatureUnit === 'c') {
-  //           weatherCopy += value.c + '\n';
-  //         } else {
-  //           weatherCopy += value.f + '\n';
-  //         }
-  //       } else if (key === 'icon') {
-  //         if (iconType === 'emoji') {
-  //           weatherCopy += value.emoji + '\n';
-  //         } else {
-  //           weatherCopy += value.open + '\n';
-  //         }
-  //       } else if (key==='windspeed') {
-  //         if (windUnit === 'mph') {
-  //           weatherCopy += value.mph + '\n';
-  //         } else if (windUnit === 'ms') {
-  //           weatherCopy += value.ms + '\n';
-  //         } else if (windUnit === 'kmh') {
-  //           weatherCopy += value.kmh + '\n';
-  //         } else if (windUnit === 'description') {
-  //           weatherCopy += value.description + '\n';
-  //         } else if (windUnit === 'beaufort') {
-  //           weatherCopy += value.beaufort + '\n';
-  //         }
-  //       } else {
-  //         weatherCopy += value + '\n';
-  //       }
-  //     }
-      
-  //   })
-  // }
-
-  let errorTextOptions = [
-    // "That doesn't seem like a real Checklist ID...",
-    $_("invalid_checlist_id"),
-    // "Try again there, bud. eBird didn't like that input.",
-  ]
   let errorText;
+  $: console.log("post-view errortext change: ", errorText);
 
   // Weather Variables
   let weatherResults = {
@@ -116,12 +80,15 @@
   };
 
   async function getWeatherHandler() {
+      if (!isChecklistId){
+        return;
+      }
       $postStatus = 'loading';
       checklistInfo = {};
       [checklistInfo, times] = await getChecklistInfo(checklistId);
       // eBird Error Handling
         if (checklistInfo.ok === false) {
-          errorText = errorTextOptions[(Math.floor(Math.random() * errorTextOptions.length))];
+          errorText = $_('invalid_checklist_id');
           $postStatus = 'error';
           return;
         }

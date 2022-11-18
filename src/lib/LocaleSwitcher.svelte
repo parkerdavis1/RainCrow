@@ -1,13 +1,11 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
+    import { language } from '../store';
 
-    export let value = 'en';
-    const dispatch = createEventDispatcher();
+    export let value = localStorage.storedLanguage;
     
     function switchLocale(event) {
       event.preventDefault();
-      dispatch('locale-changed', event.target.value);
-      localStorage.storedLanguage = JSON.stringify(event.target.value);
+      $language = event.target.value;
     }
 </script>
 

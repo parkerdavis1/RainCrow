@@ -9,7 +9,7 @@ export const dataRange = (dataStart, dataEnd) => {
           return a-b;
         })
       }
-      return `${arr[0]}-${arr[1]}`;
+      return `${arr[0]} - ${arr[1]}`;
 
     } else return dataStart;
   } else if (dataStart || dataStart === 0) {

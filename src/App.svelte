@@ -31,9 +31,21 @@
       $aboutView = false;
     }
   }
+  $: setupI18n({ withLocale: $language });
 
-  const locale = $language || 'en'
-  setupI18n({ withLocale: locale });
+  const handlePostClick = () => {
+    viewingPost = true;
+    if ($preStatus === 'error') {
+      $preStatus = 'init';
+    }
+  }
+
+  const handlePreClick = () => {
+    viewingPost = false;
+    if ($postStatus === 'error') {
+      $postStatus = 'init';
+    }
+  }
 
 </script>
 <!-- --------START OF APP-------- -->
@@ -43,10 +55,10 @@
     <h1><span class="green">Rain</span>Crow</h1>
   </div>
   <nav>
-    <div class="nav-item post-submit" on:click={()=> viewingPost = true} class:active="{viewingPost}">
+    <div class="nav-item post-submit" on:click={handlePostClick} class:active="{viewingPost}">
       <p>{$_('nav.submitted')}</p>
     </div>
-    <div class="nav-item pre-submit" on:click={()=> viewingPost = false} class:active="{!viewingPost}">
+    <div class="nav-item pre-submit" on:click={handlePreClick} class:active="{!viewingPost}">
       <p>{$_('nav.pre_submit')}</p>
     </div>
   </nav>
@@ -66,7 +78,7 @@
     </div>
     <div class="footer-right">
       <button on:click={toggleOptions}>{$_('nav.options')}</button>
-      <LocaleSwitcher value={locale} on:locale-changed={ e => setupI18n({ withLocale: e.detail }) }/>
+      <LocaleSwitcher value={$language}/>
     </div>
   </footer>
 </div>
@@ -189,6 +201,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
   .active {
     background-color: #FFFFFF;

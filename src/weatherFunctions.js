@@ -428,21 +428,21 @@ function mphToDescription(mph) {
   } else if (mph > 7 && mph <= 12) {
     return get(_)("weather.wind_description.gentle_breeze");
   } else if (mph > 12 && mph <= 18) {
-    return get(_)("weather.wind_description.moderate breeze");
+    return get(_)("weather.wind_description.moderate_breeze");
   } else if (mph > 18 && mph <= 24) {
     return get(_)("weather.wind_description.fresh_breeze");
   } else if (mph > 24 && mph <= 31) {
-    return get(_)("weather.wind_description.strong breeze");
+    return get(_)("weather.wind_description.strong_breeze");
   } else if (mph > 31 && mph <= 38) {
-    return get(_)("weather.wind_description.near gale");
+    return get(_)("weather.wind_description.near_gale");
   } else if (mph > 38 && mph <= 46) {
     return get(_)("weather.wind_description.gale");
   } else if (mph > 46 && mph <= 54) {
-    return get(_)("weather.wind_description.severe gale");
+    return get(_)("weather.wind_description.severe_gale");
   } else if (mph > 54 && mph <= 63) {
     return get(_)("weather.wind_description.storm");
   } else if (mph > 63 && mph <= 72) {
-    return get(_)("weather.wind_description.violent storm");
+    return get(_)("weather.wind_description.violent_storm");
   } else if (mph > 72 && mph <= 83) {
     return get(_)("weather.wind_description.hurricane");
   }
