@@ -45,6 +45,8 @@
     </section>
 
     <section>
+        <h3>{$_('about.daily_limits.title')}</h3>
+        <p>{$_('about.daily_limits.text')}</p>
         <details>
         <summary><strong>{$_('about.error_429.title')}</strong></summary>
         <p>{$_('about.error_429.text')}</p>

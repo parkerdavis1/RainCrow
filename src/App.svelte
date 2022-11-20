@@ -13,7 +13,7 @@
   import { _, setupI18n } from './services/i18n';
 
   // Stores
-  import { postStatus, aboutView, preStatus, options, language } from './store.js';
+  import { postStatus, aboutView, preStatus, options, language, dailyCountError } from './store.js';
 
   // State
   let viewingPost = true;
@@ -69,8 +69,11 @@
   {:else}
   <PreView />
   {/if}
-
+  
+  {#if !$dailyCountError}
   <DailyRequestPane />
+  {/if}
+
 
 <!-- --------FOOTER-------- -->
   <footer>
@@ -178,7 +181,7 @@
     height: 90vh;
     width: 100%;
     display: grid;
-    grid-template-rows: auto auto 1fr 1fr auto;
+    grid-template-rows: auto auto 1fr auto auto;
   }
   .blur {
     filter: blur(10px);
@@ -213,8 +216,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
-    grid-row: -2;
+    margin: 1rem 1rem 0;
+    grid-row: -3;
   }
   footer button {
     background-color: rgba(100,108,255, 0.2);

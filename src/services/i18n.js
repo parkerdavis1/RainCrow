@@ -47,11 +47,14 @@ function setupI18n({
                     "range_format": "Weather data is gathered for both the start and end times of a checklist and automatically displayed as a range.",
                     "limitations": "There are limitations to the accuracy of any weather API. If you are gathering weather data for a location that is near a weather station it should work just fine. If the location is a remote area with unique microclimate (deep canyons, mountain peaks, open ocean etc.) results will have more room for error. Use at your own discretion!"
                 },
+                "daily_limits": {
+                    "title": "Daily Limits",
+                    "text": "To help prevent RainCrow downtime there is a limit of 5 weather requests every 12 hours.",
+                },
                 "error_429": {
                     "title": "429 Error?",
                     "text": "If you get a error with code 429, it means that I've reached my limit of free OpenWeather API calls for the day. I'm working on a solution for this. Sorry, try again tomorrow!"
                 }
-
             },
             "submitted": {
                 "checklist_id": "Checklist ID",
@@ -133,6 +136,11 @@ function setupI18n({
                 "sunrise": "Sunrise",
                 "sunset": "Sunset",
                 "include_link": "Include Link"
+            },
+            "daily_request": {
+                "error": "You have reached your limit of weather requests for the day.",
+                "try_again": "Try again",
+                "remaining": "Remaining daily requests:"
             }
         },
         fr: {
@@ -175,6 +183,10 @@ function setupI18n({
                     "provided_by": "L'information météorologique est fournie par <a href=\"https://openweathermap.org/\" target=\"_blank\">OpenWeather</a>.",
                     "range_format": "Les données météo sont obtenues pour le début et la fin d'une liste et automatiquement affichées comme un intervalle.",
                     "limitations": "Il y a des limites à la précision de toute API météo. Si vous recherchez des données météorologiques pour un emplacement proche d'une station météo, le résultat devrait être optimal. Si l'emplacement est une région éloignée avec un microclimat unique (canyons profonds, sommets montagneux, océan, etc.), les résultats auront plus de marge d'erreur. À utiliser prudemment!"
+                },
+                "daily_limits": {
+                    "title": "Limites Quotidiennes",
+                    "text": "Pour aider à prévenir les temps d'arrêt de RainCrow, il y a une limite de 5 demandes météo toutes les 12 heures.",
                 },
                 "error_429": {
                     "title": "Vous obtenez une erreur 429?",
@@ -263,6 +275,11 @@ function setupI18n({
                 "sunrise": "Lever du soleil",
                 "sunset": "Coucher du soleil",
                 "include_link": "Inclure le lien"
+            },
+            "daily_request": {
+                "error": "Vous avez atteint votre limite de demandes météo pour la journée.",
+                "try_again": "Réessayer",
+                "remaining": "Demandes quotidiennes restantes:"
             }
         },
     });

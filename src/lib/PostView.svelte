@@ -5,9 +5,10 @@
   // Component
   import WeatherDisplay from './WeatherDisplay.svelte';
   import WeatherCopy from './WeatherCopy.svelte';
+  import DailyRequestPane from './DailyRequestPane.svelte';
 
   // Stores
-  import { postParsedWeather, postStatus, postWeatherCopy, language, dailyCount } from '../store';
+  import { postParsedWeather, postStatus, postWeatherCopy, language, dailyCount, dailyCountError } from '../store';
 
   // Weather Functions
   import { parseWeather, getWeather, getUnixTimes, getTimezoneOffset, getChecklistInfo } from '../weatherFunctions';
@@ -164,6 +165,7 @@
     </div>
 
     <div class="full-width">
+      {#if !$dailyCountError}
       <div class="weather-center weatherDisp">
         <div>
           {#if $postStatus === 'init'}
@@ -180,6 +182,9 @@
             <button class="copy-button" on:click={copyToClipboard} class:disabled={copyButtonDisabled}>{copyButtonText}</button>
           {/if}
       </div>
+      {:else}
+      <DailyRequestPane />
+      {/if}
     </div>
 
 
