@@ -7,10 +7,10 @@
     dayjs.extend(relativeTime);
     import fr from "dayjs/locale/fr";
 
-    let altDisplayTimeUntil;
+    let displayTimeUntil;
     $: {
         dayjs.locale(`${$language}`);
-        altDisplayTimeUntil = dayjs(timeUntilDailyCountExpiration).fromNow();
+        displayTimeUntil = dayjs(timeUntilDailyCountExpiration).fromNow();
     }
     
 
@@ -25,7 +25,7 @@
     {#if $dailyCountError}
     <p>{$_('daily_request.error')}</p>
     <!-- <p>Try again after {displayTimeUntil}</p> -->
-    <p>{$_('daily_request.try_again')} {altDisplayTimeUntil}</p>
+    <p>{$_('daily_request.try_again')} {displayTimeUntil}</p>
     {:else}
     <p>{$_('daily_request.remaining')} {remainingCount}</p>
     {/if}
