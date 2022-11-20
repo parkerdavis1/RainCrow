@@ -24,7 +24,6 @@
 <div class="daily-request-pane" class:error="{$dailyCountError}">
     {#if $dailyCountError}
     <p>{$_('daily_request.error')}</p>
-    <!-- <p>Try again after {displayTimeUntil}</p> -->
     <p>{$_('daily_request.try_again')} {displayTimeUntil}</p>
     {:else}
     <p>{$_('daily_request.remaining')} {remainingCount}</p>

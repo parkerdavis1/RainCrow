@@ -185,8 +185,8 @@ function setupI18n({
                     "limitations": "Il y a des limites à la précision de toute API météo. Si vous recherchez des données météorologiques pour un emplacement proche d'une station météo, le résultat devrait être optimal. Si l'emplacement est une région éloignée avec un microclimat unique (canyons profonds, sommets montagneux, océan, etc.), les résultats auront plus de marge d'erreur. À utiliser prudemment!"
                 },
                 "daily_limits": {
-                    "title": "Limites Quotidiennes",
-                    "text": "Pour aider à prévenir les temps d'arrêt de RainCrow, il y a une limite de 5 demandes météo toutes les 12 heures.",
+                    "title": "Limite quotidienne",
+                    "text": "Pour aider à prévenir les temps d'indisponibilité de RainCrow, chaque utilisateur a une limite de 5 demandes météo toutes les 12 heures.",
                 },
                 "error_429": {
                     "title": "Vous obtenez une erreur 429?",
