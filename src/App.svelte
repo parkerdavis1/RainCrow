@@ -5,6 +5,7 @@
   import AboutView from './lib/AboutView.svelte';
   import WeatherDisplay from './lib/WeatherDisplay.svelte';
   import LocaleSwitcher from './lib/LocaleSwitcher.svelte';
+  import DailyRequestPane from './lib/DailyRequestPane.svelte';
 
   // Helpers
   import { capitalizeFirst, dataRange } from './helpers';
@@ -68,6 +69,8 @@
   {:else}
   <PreView />
   {/if}
+
+  <DailyRequestPane />
 
 <!-- --------FOOTER-------- -->
   <footer>
@@ -175,7 +178,7 @@
     height: 90vh;
     width: 100%;
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto 1fr 1fr auto;
   }
   .blur {
     filter: blur(10px);
@@ -211,6 +214,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 1rem;
+    grid-row: -2;
   }
   footer button {
     background-color: rgba(100,108,255, 0.2);

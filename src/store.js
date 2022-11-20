@@ -1,5 +1,6 @@
-import { writable, derived, get } from 'svelte/store';
+import { writable, derived, get, readable } from 'svelte/store';
 import { _ } from './services/i18n';
+import { setWithExpiry, getWithExpiry } from './services/limiter';
 
 
 let defaultOptions = {
@@ -23,9 +24,24 @@ export const options = writable(JSON.parse(localStorage.getItem('storedOptions')
 // When options change, change the local store
 options.subscribe((value) => localStorage.storedOptions = JSON.stringify(value));
 
+// Language preference
 let defaultLanguage = 'en';
 export const language = writable(JSON.parse(localStorage.getItem('storedLanguage')) || defaultLanguage);
 language.subscribe((value) => localStorage.storedLanguage = JSON.stringify(value));
+
+
+// Daily request count
+export const dailyCount = writable(getWithExpiry('dailyCount') || '0');
+dailyCount.subscribe(value => setWithExpiry('dailyCount', value, (60000))); //43,200,000 is 12 hours
+
+export const dailyCountError = derived(dailyCount, ($dailyCount) => {
+    console.log('Checking dailyCount: ', $dailyCount);
+    if ($dailyCount >= 5) {
+        return true;
+    } else {
+        return false;
+    }
+});
 
 export let postParsedWeather = writable(
     { 

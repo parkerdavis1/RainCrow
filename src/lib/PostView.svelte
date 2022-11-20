@@ -3,11 +3,11 @@
   import dayjs from 'dayjs';
 
   // Component
-  import WeatherDisplay from './WeatherDisplay.svelte'
+  import WeatherDisplay from './WeatherDisplay.svelte';
   import WeatherCopy from './WeatherCopy.svelte';
 
   // Stores
-  import { postParsedWeather, postStatus, postWeatherCopy, language } from '../store';
+  import { postParsedWeather, postStatus, postWeatherCopy, language, dailyCount } from '../store';
 
   // Weather Functions
   import { parseWeather, getWeather, getUnixTimes, getTimezoneOffset, getChecklistInfo } from '../weatherFunctions';
@@ -59,7 +59,6 @@
   let weatherDisplayText;
 
   let errorText;
-  $: console.log("post-view errortext change: ", errorText);
 
   // Weather Variables
   let weatherResults = {
@@ -114,7 +113,9 @@
       }
       $postStatus = 'show'
       $postParsedWeather = parseWeather(times, weatherResults, $postParsedWeather);
+      incrementDailyCount();
   }
+
   const inputKeyup = event => {
     if (event.key === 'Enter' && isChecklistId) {
       getWeatherHandler();
@@ -123,6 +124,13 @@
 
   let checklistRegex = /S\d{7}\d*/;
   $: isChecklistId = checklistId.match(checklistRegex);
+
+  function incrementDailyCount() {
+    let count = parseInt($dailyCount);
+    count += 1;
+    $dailyCount = count.toString();
+    console.log("$dailyCount: ", $dailyCount);
+  }
 
 </script>
 
@@ -173,6 +181,7 @@
           {/if}
       </div>
     </div>
+
 
 </div>
 
