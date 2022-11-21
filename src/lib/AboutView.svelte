@@ -45,6 +45,11 @@
     </section>
 
     <section>
+        <h3>{$_('about.languages.title')}</h3>
+        <p>{@html $_('about.languages.text')}</p>
+    </section>
+
+    <section>
         <h3>{$_('about.daily_limits.title')}</h3>
         <p>{$_('about.daily_limits.text')}</p>
         <details>

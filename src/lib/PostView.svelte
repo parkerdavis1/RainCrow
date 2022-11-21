@@ -80,7 +80,7 @@
   };
 
   async function getWeatherHandler() {
-      if (!isChecklistId){
+      if (!isChecklistId || $dailyCountError){
         return;
       }
       $postStatus = 'loading';
@@ -153,7 +153,7 @@
     <button 
       id="submitButton" 
       on:click={getWeatherHandler}
-      disabled={!isChecklistId}
+      disabled={!isChecklistId || $dailyCountError}
     > 
       {$_('submitted.get_weather')}
     </button>

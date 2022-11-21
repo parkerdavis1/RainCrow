@@ -121,7 +121,7 @@
   let errorText;
 
   const handleGetWeather = async() => {
-    if (!formIsValid) {
+    if (!formIsValid || $dailyCountError) {
       return;
     }
     $preStatus = 'loading';
@@ -142,6 +142,7 @@
     $preParsedWeather = parseWeather(times, weatherResults, $preParsedWeather);
     incrementDailyCount();
   }
+  
   const inputKeyup = event => {
     if (event.key === 'Enter') {
       handleGetWeather();
@@ -276,7 +277,11 @@
         {/if}
     </div>
     
-    <button class="preView-button" type="submit" on:click={handleGetWeather} disabled={!formIsValid}>{$_('pre_submit.get_weather')}</button>
+    <button 
+      class="preView-button" 
+      type="submit" on:click={handleGetWeather} 
+      disabled={!formIsValid || $dailyCountError}>{$_('pre_submit.get_weather')}
+    </button>
 
     <div class="full-width">
       {#if !$dailyCountError}

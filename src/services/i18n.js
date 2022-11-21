@@ -47,9 +47,13 @@ function setupI18n({
                     "range_format": "Weather data is gathered for both the start and end times of a checklist and automatically displayed as a range.",
                     "limitations": "There are limitations to the accuracy of any weather API. If you are gathering weather data for a location that is near a weather station it should work just fine. If the location is a remote area with unique microclimate (deep canyons, mountain peaks, open ocean etc.) results will have more room for error. Use at your own discretion!"
                 },
+                "languages": {
+                    "title": "Languages",
+                    "text": "French internationalization added by <a href=\"https://ebird.org/profile/MjczODA4OQ/\">Marie-Andrée Boucher-Beaulieu</a>. If you would like to help add other languages please <a href=\"mailto:parker@birdsmakesound.com\">reach out</a>!"
+                },
                 "daily_limits": {
                     "title": "Daily Limits",
-                    "text": "To help prevent RainCrow downtime there is a limit of 5 weather requests every 12 hours.",
+                    "text": "To help prevent RainCrow downtime there is a limit of 5 weather requests per user every 12 hours.",
                 },
                 "error_429": {
                     "title": "429 Error?",
@@ -183,6 +187,10 @@ function setupI18n({
                     "provided_by": "L'information météorologique est fournie par <a href=\"https://openweathermap.org/\" target=\"_blank\">OpenWeather</a>.",
                     "range_format": "Les données météo sont obtenues pour le début et la fin d'une liste et automatiquement affichées comme un intervalle.",
                     "limitations": "Il y a des limites à la précision de toute API météo. Si vous recherchez des données météorologiques pour un emplacement proche d'une station météo, le résultat devrait être optimal. Si l'emplacement est une région éloignée avec un microclimat unique (canyons profonds, sommets montagneux, océan, etc.), les résultats auront plus de marge d'erreur. À utiliser prudemment!"
+                },
+                "languages": {
+                    "title": "Langues",
+                    "text": "L'internationalisation de l'app ainsi que l'ajout du français a été fait par  <a href=\"https://ebird.org/profile/MjczODA4OQ/\">Marie-Andrée Boucher-Beaulieu</a>. Si vous voulez contribuer à l'ajout d'autres langues, <a href=\"mailto:parker@birdsmakesound.com\">contactez-moi</a>!"
                 },
                 "daily_limits": {
                     "title": "Limite quotidienne",

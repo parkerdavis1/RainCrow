@@ -32,7 +32,7 @@ language.subscribe((value) => localStorage.storedLanguage = JSON.stringify(value
 
 // Daily request count
 export const dailyCount = writable(getWithExpiry('dailyCount') || '0');
-dailyCount.subscribe(value => setWithExpiry('dailyCount', value, (60000))); //43,200,000 is 12 hours
+dailyCount.subscribe(value => setWithExpiry('dailyCount', value, (43200000))); //43200000 is 12 hours
 
 export const dailyCountError = derived(dailyCount, ($dailyCount) => {
     console.log('Checking dailyCount: ', $dailyCount);
