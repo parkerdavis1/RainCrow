@@ -89,9 +89,11 @@
 
   // latLon Parser 
   const getLatLon = () => {
-    let commaIndex = latLon.indexOf(',');
-    location.lat = latLon.slice(0, commaIndex).trim();
-    location.lon = latLon.slice(commaIndex + 1).trim();
+    const parenRemoveRegex = /(\(|\))/g;
+    const latLonNoParen = latLon.replace(parenRemoveRegex, '');
+    let commaIndex = latLonNoParen.indexOf(',');
+    location.lat = latLonNoParen.slice(0, commaIndex).trim();
+    location.lon = latLonNoParen.slice(commaIndex + 1).trim();
   }
 
   // Location Obj
