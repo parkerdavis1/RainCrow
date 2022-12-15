@@ -123,6 +123,7 @@ function setupI18n({
                 "wind_direction": "Wind Direction",
                 "cloud_cover": "Cloud Cover",
                 "humidity": "Humidity",
+                "pressure": "Pressure",
                 "sunrise": "Sunrise",
                 "sunset": "Sunset",
             },
@@ -137,6 +138,7 @@ function setupI18n({
                 "wind_direction": "Wind Direction",
                 "cloud_cover": "Cloud Cover",
                 "humidity": "Humidity",
+                "pressure": "Pressure",
                 "sunrise": "Sunrise",
                 "sunset": "Sunset",
                 "include_link": "Include Link"
@@ -266,6 +268,7 @@ function setupI18n({
                 "wind_direction": "Direction du vent",
                 "cloud_cover": "Couverture nuageuse",
                 "humidity": "Humidité",
+                "pressure": "Pression",
                 "sunrise": "Lever du soleil",
                 "sunset": "Coucher du soleil",
             },
@@ -280,6 +283,7 @@ function setupI18n({
                 "wind_direction": "Direction du vent",
                 "cloud_cover": "Couverture nuageuse",
                 "humidity": "Humidité",
+                "pressure": "Pression",
                 "sunrise": "Lever du soleil",
                 "sunset": "Coucher du soleil",
                 "include_link": "Inclure le lien"

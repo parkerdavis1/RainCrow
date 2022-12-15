@@ -155,6 +155,10 @@
         <label for="humidity">{$_('options.humidity')} (%)</label>
       </div>
       <div class="option-item">
+        <input type="checkbox" name="pressure" id="pressure" bind:checked={$options.pressure}>
+        <label for="pressure">{$_('options.pressure')} (hPa)</label>
+      </div>
+      <div class="option-item">
         <input type="checkbox" name="sunrise" id="sunrise" bind:checked={$options.sunrise}>
         <label for="sunrise">{$_('options.sunrise')}</label>
       </div>

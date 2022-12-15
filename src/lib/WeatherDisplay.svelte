@@ -130,6 +130,16 @@
       </p>
     {/if}
 
+    {#if $options.pressure}
+      <p>{$_('weather.pressure')}: 
+        {#if isPost}
+          {$postParsedWeather.pressure} hPa
+        {:else}
+          {$preParsedWeather.pressure} hPa
+        {/if}
+      </p>
+    {/if}
+
     {#if $options.sunrise}
       <p>{$_('weather.sunrise')}: 
         {#if isPost}

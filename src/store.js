@@ -15,6 +15,7 @@ let defaultOptions = {
     sunset: true,
     cloudCover: true,
     humidity: true,
+    pressure: false,
     icon: true,
     iconType: 'emoji',
     attr: true,
@@ -67,6 +68,7 @@ export let postParsedWeather = writable(
         },
         cloudCover: null,
         humidity: null,
+        pressure: null,
         sunrise: null,
         sunset: null,
         timezone: null,
@@ -96,6 +98,7 @@ export let preParsedWeather = writable(
         },
         cloudCover: null,
         humidity: null,
+        pressure: null,
         sunrise: null,
         sunset: null,
         timezone: null,
@@ -144,12 +147,17 @@ function renderCopyText(options, parsedWeather) {
     }
     if (options.cloudCover) {
         textReturn += get(_)('weather.cloud_cover') + ': ';
-        textReturn += parsedWeather.cloudCover;
+        textReturn += parsedWeather.cloudCover + "%";
         textReturn += '\n';
     }
     if (options.humidity) {
         textReturn += get(_)('weather.humidity') + ': ';
-        textReturn += parsedWeather.humidity;
+        textReturn += parsedWeather.humidity + "%";
+        textReturn += '\n';
+    }
+    if (options.pressure) {
+        textReturn += get(_)('weather.pressure') + ': ';
+        textReturn += parsedWeather.pressure + " hPa";
         textReturn += '\n';
     }
     if (options.sunrise) {

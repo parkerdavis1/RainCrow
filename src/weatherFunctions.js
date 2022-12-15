@@ -41,6 +41,7 @@ export function parseWeather(times, weatherResults, parsedWeather) {
     },
     cloudCover: null,
     humidity: null,
+    pressure: null,
     sunrise: null,
     sunset: null,
     timezone: null,
@@ -219,6 +220,16 @@ export function parseWeather(times, weatherResults, parsedWeather) {
     humidity.end = weatherResults.end.data[0].humidity;
   }
   parsedWeather.humidity = dataRange(humidity.start, humidity.end);
+
+  // PRESSURE
+  let pressure = {
+    start: weatherResults.start.data[0].pressure,
+    end: null
+  }
+  if (weatherResults.end) {
+    pressure.end = weatherResults.end.data[0].pressure;
+  }
+  parsedWeather.pressure = dataRange(pressure.start, pressure.end);
 
   // SUNRISE
   let sunrise = dayjs.utc(weatherResults.start.data[0].sunrise, "X").add(times.offset, "seconds").format("h:mma"); //need to use utc and offset by correct timezone offset so avoid issues when local timezone is different than checklist timezone
