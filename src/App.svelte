@@ -187,13 +187,17 @@
     display: grid;
     grid-template-rows: auto auto 1fr auto auto;
   }
+
   .blur {
     filter: blur(10px);
     transition: filter 500ms;
+    pointer-events: none;
   }
+
   .title {
     text-align: center;
   }
+
   nav {
     width: 100%;
     display: flex;
@@ -203,6 +207,7 @@
     height: 3rem;
     background-color: #EEEEEE;
   }
+
   .nav-item {
     width: 100%;
     height: 80%;
@@ -213,9 +218,11 @@
     align-items: center;
     cursor: pointer;
   }
+
   .active {
     background-color: #FFFFFF;
   }
+
   footer {
     display: flex;
     justify-content: space-between;
@@ -223,6 +230,7 @@
     margin: 1rem 1rem 0;
     grid-row: -3;
   }
+
   footer button {
     background-color: rgba(100,108,255, 0.2);
     color: black;
@@ -231,13 +239,16 @@
     cursor: pointer;
     margin: 1rem;
   }
+
   footer button:hover {
     background-color: rgba(100,108,255, 0.3);
   }
+
   footer .footer-right {
     display: flex;
     align-items: center;
   }
+
   .options-container {
     background-color: white;
     position: fixed;
@@ -257,17 +268,21 @@
     justify-items: center;
     overflow: scroll;
   }
+
   .options-list {
     overflow: scroll;
     /* min-width: 200px; */
   }
+  
   .options-scroll {
     overflow: scroll;
     /* width: 100%; */
   }
+  
   .done-button {
     width: 200px;
   }
+  
   .option-item {
     padding: 5px 5px;
     width: 100%;
@@ -276,20 +291,25 @@
     align-items: center;
     gap: 1rem;
   }
+  
   .option-item input {
     flex-grow: 0;
   }
+  
   .option-item label {
     flex-grow: 1;
   }
+  
   .about-button {
     border: none;
     background-color: white;
     color: #646cff;
   }
+  
   .about-button:hover {
     background-color: inherit;
   }
+  
   .green {
     color: #409100;
   }
