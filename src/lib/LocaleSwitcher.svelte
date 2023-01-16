@@ -13,6 +13,7 @@
   <select value={value} on:change={switchLocale}>
     <option value="en">English</option>
     <option value="fr">Français</option>
+    <option value="es">Spanish</option>
   </select>
 </div>
 

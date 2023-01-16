@@ -273,16 +273,16 @@
     overflow: scroll;
     /* min-width: 200px; */
   }
-  
+
   .options-scroll {
     overflow: scroll;
     /* width: 100%; */
   }
-  
+
   .done-button {
     width: 200px;
   }
-  
+
   .option-item {
     padding: 5px 5px;
     width: 100%;
@@ -291,27 +291,26 @@
     align-items: center;
     gap: 1rem;
   }
-  
+
   .option-item input {
     flex-grow: 0;
   }
-  
+
   .option-item label {
     flex-grow: 1;
   }
-  
+
   .about-button {
     border: none;
     background-color: white;
     color: #646cff;
   }
-  
+
   .about-button:hover {
     background-color: inherit;
   }
-  
+
   .green {
     color: #409100;
   }
-
 </style>
