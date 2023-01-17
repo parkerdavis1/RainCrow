@@ -6,7 +6,7 @@
 
 <div class="about-container">
     <div class="menu-exit" on:click={()=> $aboutView = false}>🆇</div>
-    <h2>{$_('about.welcome')}! 🌦</h2>
+    <h2>{$_('about.welcome')}! &#x1F326;</h2>
     <p class="attr">{$_('about.created_by')} <a href="https://parkerdavis.dev/" target="_blank">Parker Davis</a></p>
 
     <p>{@html $_('about.app_purpose')}</p>

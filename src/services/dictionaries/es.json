@@ -26,7 +26,7 @@
       "iphone_users" : "Para iPhone, la configuración se encuentra en Configuración > Privacidad > Servicios de ubicación > (Navegador elegido) > Permitir acceso a la ubicación",
       "text" : "Úselo antes de enviar una lista de eBird. Esto está indicado para incluir los datos meteorológicos en las listas compartidas.",
       "title" : "Listas sin enviar",
-      "toggle_location_preference" : "Si al hacer clic <span class=\"highlight\">en Ubicar </span> no se le pide que permita el acceso a la ubicación, intente desactivar y volver a activar la preferencia de ubicación.",
+      "toggle_location_preference" : "Si al hacer clic en <span class=\"highlight\">Ubicar</span> no se le pide que permita el acceso a la ubicación, intente desactivar y volver a activar la preferencia de ubicación.",
       "troubleshoot_title" : "¿<span class=\"highlight\">Ubicar</span> no funciona?"
     },
     "submitted" : {
@@ -99,7 +99,7 @@
   "submitted" : {
     "checklist_id" : "ID de la lista",
     "get_weather" : "Datos meteorológicos",
-    "help" : "Introduzca una ID de una lista de eBird y cliquee en \"Datos meteorológicos\"",
+    "help" : "Introduzca la ID de una lista de eBird y cliquee en \"Datos meteorológicos\"",
     "historical_checklist_error" : "Las llamadas \"listas históricas\" no son válidas. Se precisa una fecha real para poder obtener datos meteorológicos.",
     "invalid_checklist_id" : "Por favor, introduzca una lista con una ID correcta.",
     "too_old_checklist_error" : "Las fechas anteriores al 1 de enero de 1979 no se admiten en la aplicación de OpenWeather."
