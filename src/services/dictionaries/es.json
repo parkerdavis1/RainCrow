@@ -12,11 +12,11 @@
       "title" : "¿Error 429?"
     },
     "languages" : {
-      "text" : "La internacionalización (i18n) y la traducción al francés la ha realizado <a href=\"https://ebird.org/profile/MjczODA4OQ/\">Marie-Andrée Boucher-Beaulieu</a>. La versión en español ha corrido a cargo de <a href=\"https://ebird.org/profile/OTc2Mjc0/\">JC Paniagua</a>. Si desea ayudar a incluir algún otro idioma, por favor, escríbame un correo  <a href=\"mailto:parker@birdsmakesound.com\">reach out</a>",
+      "text" : "La internacionalización (i18n) y la traducción al francés la ha realizado <a href=\"https://ebird.org/profile/MjczODA4OQ/\">Marie-Andrée Boucher-Beaulieu</a>. La versión en español ha corrido a cargo de <a href=\"https://ebird.org/profile/OTc2Mjc0/\">JC Paniagua</a>. Si desea ayudar a incluir algún otro idioma, por favor, escríbame un correo  <a href=\"mailto:parker@birdsmakesound.com\">aquí</a>!",
       "title" : "Idiomas"
     },
     "options" : {
-      "icon_and_links" : "Para que <strong>los iconos de OpenWeather</strong> y las opciones <strong>Incluir enlaces</strong> aparezcan en su lista de eBird, debe <HTML tags>incluirlos para insertar las imágenes o crear el enlace. No necesita hacerlo usted mismo, el código se incluye al hacer clic en <span class=\"copy\">Copiar al portapapeles</span>. Las imágenes y el enlace se mostrarán normalmente una vez que envíe el código copiado a los comentarios de su lista.",
+      "icon_and_links" : "Para que <strong>los iconos de OpenWeather</strong> y la opción <strong>Incluir el enlace a RainCrow</strong> aparezcan en las observaciones de su lista de eBird, hay que incluir &lt;HTML tags&gt;. Usted no tiene que hacer nada. RainCrow lo hace automáticamente. Basta con seleccionarlos en las opciones para que aparezcan las imágenes o se cree el enlace. No hay que hacer nada más que darle clic a <span class=\"copy\">Copiar al portapapeles</span>. Las imágenes y el enlace se mostrarán cuando pegue el contenido del portapapeles a los comentarios de su lista.",
       "text" : "El menú de \"Opciones\" le permite seleccionar los datos meteorológicos que desee incluir.",
       "title" : "Opciones"
     },
