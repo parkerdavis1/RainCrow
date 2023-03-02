@@ -1,4 +1,4 @@
-# RainCrow | eBird Weather
+# [RainCrow](https://raincrow.netlify.app/)
 
 [See it live](https://raincrow.netlify.app/)
 
