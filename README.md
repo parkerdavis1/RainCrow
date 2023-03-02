@@ -4,4 +4,8 @@
 
 This web app was created for the quick retrieval of historical weather observations for eBird checklists.
 
+You can read about it here: [https://parkerdavis.dev/projects/ebird-weather/](https://parkerdavis.dev/projects/ebird-weather/)
+
+or here: [https://birdsmakesound.com/blog/raincrow/](https://birdsmakesound.com/blog/raincrow/)
+
 [eBird](https://ebird.org/about) is a global citizen science database where users submit checklists to contibute to a shared understanding of the world's bird life.

@@ -8,7 +8,7 @@
     },
     "email_me" : "Si desea comunicar algún comentario, sugerencia, bug, etc., por favor, no dude en escribirme a  <a href=\"mailto:parker@birdsmakesound.com\">parker@birdsmakesound.com</a>",
     "error_429" : {
-      "text" : "Si le aparece un mensaje con el código de error 429, se debe a que se ha llegado al límite que la aplicación OpenWeather me ha concedido para ese día. Estoy tratando de solucionar este asunto. Disculpe las molestias e inténtelo mañana.",
+      "text" : "Si le aparece un mensaje con el código de error 429, se debe a que se ha llegado al límite que la aplicación OpenWeather me ha concedido para ese día. Estoy tratando de solucionar este asunto. Disculpe las molestias e inténtelo pasadas unas horas.",
       "title" : "¿Error 429?"
     },
     "languages" : {
@@ -17,26 +17,26 @@
     },
     "options" : {
       "icon_and_links" : "Para que <strong>los iconos de OpenWeather</strong> y la opción <strong>Incluir el enlace a RainCrow</strong> aparezcan en las observaciones de su lista de eBird, hay que incluir &lt;HTML tags&gt;. Usted no tiene que hacer nada. RainCrow lo hace automáticamente. Basta con seleccionarlos en las opciones para que aparezcan las imágenes o se cree el enlace. No hay que hacer nada más que darle clic a <span class=\"copy\">Copiar al portapapeles</span>. Las imágenes y el enlace se mostrarán cuando pegue el contenido del portapapeles a los comentarios de su lista.",
-      "text" : "El menú de \"Opciones\" le permite seleccionar los datos meteorológicos que desee incluir.",
+      "text" : "El menú de \"Opciones\" le permite seleccionar los datos meteorológicos que desee que aparezcan.",
       "title" : "Opciones"
     },
     "pre_submit" : {
       "allow_location_access" : "Asegúrese de permitir el acceso a su ubicación.",
       "enable_location_service" : "Compruebe que los servicios de ubicación estén habilitados.",
       "iphone_users" : "Para iPhone, la configuración se encuentra en Configuración > Privacidad > Servicios de ubicación > (Navegador elegido) > Permitir acceso a la ubicación",
-      "text" : "Úselo antes de enviar una lista de eBird. Esto está indicado para incluir los datos meteorológicos en las listas compartidas.",
+      "text" : "Use esta pestaña justo antes de subir una lista de eBird. Esta opción está pensada para añadir los datos meteorológicos en las listas compartidas.",
       "title" : "Listas sin enviar",
       "toggle_location_preference" : "Si al hacer clic en <span class=\"highlight\">Ubicar</span> no se le pide que permita el acceso a la ubicación, intente desactivar y volver a activar la preferencia de ubicación.",
       "troubleshoot_title" : "¿<span class=\"highlight\">Ubicar</span> no funciona?"
     },
     "submitted" : {
-      "text" : "Úselo para listas que ya se han enviado a eBird. Simplemente introduzca la ID de la lista o la URL completa y cliquee en <span class=\"highlight\">Datos meteorológicos</span>.",
+      "text" : "Use esta pestaña para listas que ya se hayan enviado a eBird. Basta con poner el identificador de la lista o la URL completa y hacer clic en <span class=\"highlight\">Datos meteorológicos</span>.",
       "title" : "Listas enviadas"
     },
     "weather_data" : {
       "limitations" : "Cualquier aplicación meteorológica presenta limitaciones. Si se solicitan datos del tiempo para una ubicación cercana a una estación meteorológica, los resultados deberían ser bastante precisos. Si la ubicación es un área remota o con un particular microclima (barrancos o cañones profundos, cumbres, alta montaña, mar abierto, ciertos valles, etc.), los resultados pueden estar sujetos a un mayor margen de error. ¡Téngalo en cuenta y use los datos con precaución!",
       "provided_by" : "Los datos meteorológicos son proporcionados por <a href=\"https://openweathermap.org/\" target=\"_blank\">OpenWeather</a>.",
-      "range_format" : "Los datos meteorológicos se recopilan para las horas de inicio y finalización de la lista de eBird y se muestran automáticamente como un rango.",
+      "range_format" : "Los datos meteorológicos se toman para las horas de inicio y finalización de la lista de eBird y se muestran automáticamente en una horquilla.",
       "title" : "Datos meteorológicos"
     },
     "welcome" : "Bienvenido a RainCrow"
@@ -68,7 +68,7 @@
     "conditions" : "Condiciones",
     "emoji" : "Emojis ",
     "humidity" : "Humedad",
-    "include_link" : "Incluir el enlace",
+    "include_link" : "Incluir un enlace a RainCrow ",
     "pressure" : "Presión",
     "sunrise" : "Salida del sol ",
     "sunset" : "Puesta del sol",
@@ -80,11 +80,11 @@
     "windspeed_description" : "Descripción"
   },
   "pre_submit" : {
-    "coordinates_error" : "Introduzca las coordenadas en grados decimales.",
+    "coordinates_error" : "Por favor, exprese las coordenadas en grados decimales correctos.",
     "date" : "Fecha",
-    "date_error" : "Introduzca el formato de fecha admitido: AAAA-MM-DD",
+    "date_error" : "Use el formato de fecha admitido: AAAA-MM-DD",
     "duration" : "Duración",
-    "duration_error" : "Introduzca un valor para los minutos igual o mayor que cero.",
+    "duration_error" : "Ponga un valor para los minutos igual o mayor que cero.",
     "get_weather" : "Datos meteorológicos",
     "latitude" : "Latitud",
     "locate" : "Ubicar",
@@ -94,14 +94,14 @@
     "longitude" : "Longitud",
     "minutes" : "minutos",
     "start_time" : "Hora de inicio",
-    "start_time_error" : "Introduzca una hora de inicio en el formato de 24 horas: HH:MM"
+    "start_time_error" : "La hora de inicio tiene que ponerse en el formato de 24 horas: HH:MM"
   },
   "submitted" : {
-    "checklist_id" : "ID de la lista",
+    "checklist_id" : "Identificador de la lista",
     "get_weather" : "Datos meteorológicos",
-    "help" : "Introduzca la ID de una lista de eBird y cliquee en \"Datos meteorológicos\"",
-    "historical_checklist_error" : "Las llamadas \"listas históricas\" no son válidas. Se precisa una fecha real para poder obtener datos meteorológicos.",
-    "invalid_checklist_id" : "Por favor, introduzca una lista con una ID correcta.",
+    "help" : "Ponga el identificador de una lista de eBird y haga clic en \"Datos meteorológicos\"",
+    "historical_checklist_error" : "Las llamadas \"listas históricas\" no son válidas. Se precisa una hora concreta para poder obtener datos meteorológicos correctos.",
+    "invalid_checklist_id" : "Por favor, verifique que el identificador sea el correcto.",
     "too_old_checklist_error" : "Las fechas anteriores al 1 de enero de 1979 no se admiten en la aplicación de OpenWeather."
   },
   "weather" : {
@@ -138,6 +138,6 @@
       "strong_breeze" : "viento fuerte ",
       "violent_storm" : "temporal muy duro "
     },
-    "wind_direction" : "Dirección del viento"
+    "wind_direction" : "Viento procedente del"
   }
 }
