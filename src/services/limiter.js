@@ -8,7 +8,6 @@ export function setWithExpiry(key, value, ttl) {
             value: value,
             expiry: now.getTime() + ttl,
         }
-        console.log('set new count with new expiration');
         localStorage.setItem(key, JSON.stringify(itemToSet));
     } else {
         // parse it into a JSON object
