@@ -154,6 +154,7 @@
       id="submitButton" 
       on:click={getWeatherHandler}
       disabled={!isChecklistId || $dailyCountError}
+      class="button"
     > 
       {$_('submitted.get_weather')}
     </button>

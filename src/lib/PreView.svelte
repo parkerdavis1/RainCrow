@@ -229,7 +229,7 @@
       {/if}
     </div>
     
-    <button class="preView-button locate" on:click={handleLocate}>{locateButtonText}</button>
+    <button class="preView-button locate button" on:click={handleLocate}>{locateButtonText}</button>
 
     <div class="date-input full-width">
       <label for="date">{$_('pre_submit.date')}</label>
@@ -280,7 +280,7 @@
     </div>
     
     <button 
-      class="preView-button" 
+      class="preView-button button" 
       type="submit" on:click={handleGetWeather} 
       disabled={!formIsValid || $dailyCountError}>{$_('pre_submit.get_weather')}
     </button>
@@ -303,15 +303,13 @@
           {/if}
         </div>
           {#if $preStatus === 'show'}
-            <button class="copy-button" on:click={copyToClipboard} class:disabled={copyButtonDisabled}>{copyButtonText}</button>
+            <button class="copy-button button" on:click={copyToClipboard} class:disabled={copyButtonDisabled}>{copyButtonText}</button>
           {/if}
       </div>
       {:else}
       <DailyRequestPane />
       {/if}
     </div>
-    <!-- daily request test button -->
-    <!-- <button on:click={incrementDailyCount}>+</button> -->
 </div>
 
   <style>

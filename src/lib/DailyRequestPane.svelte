@@ -5,7 +5,6 @@
     import dayjs from 'dayjs';
     import relativeTime from 'dayjs/plugin/relativeTime';
     dayjs.extend(relativeTime);
-    import fr from "dayjs/locale/fr";
 
     let displayTimeUntil;
     $: {
@@ -13,13 +12,14 @@
         displayTimeUntil = dayjs(timeUntilDailyCountExpiration).fromNow();
     }
     
-
-
     const timeUntilDailyCountExpiration = JSON.parse(localStorage.getItem('dailyCount')).expiry;
 
     $: remainingCount = 5 - $dailyCount;
-
 </script>
+
+
+
+
 
 <div class="daily-request-pane" class:error="{$dailyCountError}">
     {#if $dailyCountError}
@@ -29,6 +29,8 @@
     <p>{$_('daily_request.remaining')} {remainingCount}</p>
     {/if}
 </div>
+
+
 
 
 
@@ -55,5 +57,4 @@
         padding: 1rem;
 
     }
-
 </style>

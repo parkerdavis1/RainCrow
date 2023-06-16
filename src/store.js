@@ -194,3 +194,5 @@ export let postStatus = writable('init');
 export let preStatus = writable('init');
 
 export let aboutView = writable(false);
+export let optionsView = writable(false);
+export let viewingPost = writable(true);

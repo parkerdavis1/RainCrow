@@ -11,15 +11,13 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-h1 {
-  font-family: Lora, serif;
-}
 
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -29,11 +27,13 @@ a:hover {
   max-width: 600px;
   margin: 0 auto;
 }
+
 .ui-container {
   display: grid;
   grid-template-columns: [leftapp] 1fr [content-start] 25px 25px [button-start] 25px 25px 25px [center-line] 25px 25px 25px [button-end] 25px 25px [content-end] 1fr [rightapp];
   column-gap: 5px;
 }
+
 input:not([type="checkbox"]) {
   background-color: white;
   font-size: inherit;
@@ -43,53 +43,66 @@ input:not([type="checkbox"]) {
   width: 100%;
   margin-bottom: 10px;
 }
+
 button {
+  border: none;
+  cursor: pointer;
+  background: inherit
+}
+
+button:hover {
+  background: inherit
+}
+
+.button {
   grid-column-start: button-start;
   grid-column-end: button-end;
   min-height: 2.5rem;
-
-  background-color:#409100 ;
-  color: white;
-  border: none;
   border-radius: 5px;
   padding: 5px;
   margin-top: 1rem;
-  cursor: pointer;
-  }
-button:disabled {
+  background-color:#409100 ;
+  color: white;
+  grid-column: button-start / button-end;
+
+}
+
+.button:enabled:hover {
+  background-color: rgba(63, 145, 0, 0.9);
+}
+
+.button:disabled {
   background-color: #A2A2A2;
   cursor: default;
 }
-button {
-  grid-column: button-start / button-end;
-}
-button:enabled:hover:not(.copy-button) {
-  background-color: rgba(63, 145, 0, 0.9);
-}
+
 .full-width {
   grid-column: content-start / content-end;
 }
-.full-full-width {
-  grid-column: leftapp / rightapp;
-}
+
 .top-ui {
   margin-top: 2rem;
 }
+
 .response-field {
   background-color: #f0f6fa;
   margin-top: 1rem;
 }
+
 .copy-button {
   background-color: #4A96D9;
   padding: 0 15px;
 }
+
 .copy-button:hover {
   background-color: rgba(74, 150, 217, 0.9);
 }
+
 .weatherDisp {
   background-color: #f0f6fa;
   padding: 1rem;
 }
+
 .weather-center {
   display: flex;
   flex-flow: column;
@@ -100,11 +113,13 @@ button:enabled:hover:not(.copy-button) {
   max-width: 90%;
   margin: auto;
 }
+
 .menu-exit {
   position: absolute;
   top: 0px;
   right: 0px;
-  padding: 0 5px;
+  padding: 0;
   font-size: 2rem;
   cursor: pointer;
+  display: flex;
 }
