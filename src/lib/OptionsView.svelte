@@ -47,10 +47,10 @@
     padding: 1rem;
 
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
     grid-template-columns: 1fr;
     justify-items: center;
-    overflow: scroll;
+    /* overflow: scroll; */
   }
 
   .options-scroll {

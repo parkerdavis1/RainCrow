@@ -8,6 +8,7 @@
 
 <div class="options-list">
 
+
     <!-- Weather Icons -->
     <div class="option-item">
       <input type="checkbox" name="icon" id="icon" bind:checked={$options.icon}>
@@ -93,6 +94,7 @@
       <label for="attr">{$_('options.include_link')}</label>
     </div>
 
+    <hr>
     <div class="option-item">
       <label for="language">Language</label>
       <LocaleSwitcher value={$language} />

@@ -34,7 +34,8 @@ a:hover {
   column-gap: 5px;
 }
 
-input:not([type="checkbox"]) {
+/* input:not([type="checkbox"]) { */
+input {
   background-color: white;
   font-size: inherit;
   font-family: inherit;
@@ -42,6 +43,12 @@ input:not([type="checkbox"]) {
   height: 2rem;
   width: 100%;
   margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  height: unset;
+  width: unset;
+  margin-bottom: unset;
 }
 
 button {
@@ -67,13 +74,26 @@ button:hover {
 
 }
 
-.button:enabled:hover {
+.button:hover {
   background-color: rgba(63, 145, 0, 0.9);
 }
 
 .button:disabled {
   background-color: #A2A2A2;
   cursor: default;
+}
+
+.copy-button {
+  background-color: #4A96D9;
+  padding: 0 15px;
+}
+
+.copy-button:hover {
+  background-color: rgba(74, 150, 217, 0.9);
+}
+
+.preView-button {
+  margin: 0;
 }
 
 .full-width {
@@ -87,15 +107,6 @@ button:hover {
 .response-field {
   background-color: #f0f6fa;
   margin-top: 1rem;
-}
-
-.copy-button {
-  background-color: #4A96D9;
-  padding: 0 15px;
-}
-
-.copy-button:hover {
-  background-color: rgba(74, 150, 217, 0.9);
 }
 
 .weatherDisp {
@@ -122,4 +133,17 @@ button:hover {
   font-size: 2rem;
   cursor: pointer;
   display: flex;
+}
+
+.error {
+  border: 1px red solid !important;
+}
+
+.error-message {
+  font-size: small;
+  color: red;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 10px;
 }
