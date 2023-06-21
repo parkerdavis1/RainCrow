@@ -16,16 +16,3 @@
     <option value="es">Español</option>
   </select>
 </div>
-
-<style>
-    /* .choose-locale {
-      display: flex;
-      justify-content: center;
-    }
-
-    select {
-      height: 2.5rem;
-      border-radius: 5px;
-      padding: 4px;
-    } */
-</style>

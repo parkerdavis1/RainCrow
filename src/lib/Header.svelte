@@ -58,6 +58,7 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        color: black;
     }
 
     .active {

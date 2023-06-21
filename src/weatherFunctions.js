@@ -414,7 +414,7 @@ export async function getChecklistInfo(checklistId) {
     const checklistURL =
         'https://api.ebird.org/v2/product/checklist/view/' + realChecklistId;
 
-    //reset for each call
+    // reset for each call
     let checklistInfo = {};
     let times = {
         offset: 0,

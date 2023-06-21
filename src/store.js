@@ -222,4 +222,9 @@ export let preErrorText = writable('')
 
 export let aboutView = writable(false)
 export let optionsView = writable(false)
-export let viewingPost = writable(true)
+export let viewingPost = writable(
+    JSON.parse(localStorage.getItem('viewingPost')) || false
+)
+viewingPost.subscribe(
+    value => (localStorage.viewingPost = JSON.stringify(value))
+)

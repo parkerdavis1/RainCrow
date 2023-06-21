@@ -43,7 +43,7 @@
     footer {    
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         margin: 1rem 1rem 0;
         grid-row: -3;
     }

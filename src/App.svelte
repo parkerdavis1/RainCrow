@@ -3,26 +3,18 @@
     import PostView from './lib/PostView.svelte'
     import PreView from './lib/PreView.svelte'
     import AboutView from './lib/AboutView.svelte'
-    import WeatherDisplay from './lib/WeatherDisplay.svelte'
-    import LocaleSwitcher from './lib/LocaleSwitcher.svelte'
     import DailyRequestPane from './lib/DailyRequestPane.svelte'
     import Footer from './lib/Footer.svelte'
     import Header from './lib/Header.svelte'
-
     import OptionsView from './lib/OptionsView.svelte'
 
     // Helpers
-    import { capitalizeFirst, dataRange } from './helpers'
-    import dayjs from 'dayjs'
     import { _, setupI18n } from './services/i18n'
 
     // Stores
     import {
-        postStatus,
         aboutView,
         optionsView,
-        preStatus,
-        options,
         language,
         dailyCountError,
         viewingPost,
@@ -70,6 +62,7 @@
     <OptionsView />
 {/if}
 
+<!-- --------STYLE-------- -->
 <style>
     .vertical-grid-container {
         height: 90vh;
