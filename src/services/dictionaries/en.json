@@ -69,6 +69,7 @@
     "emoji" : "Emoji",
     "humidity" : "Humidity",
     "include_link" : "Include Link",
+    "language" : "Language",
     "pressure" : "Pressure",
     "sunrise" : "Sunrise",
     "sunset" : "Sunset",

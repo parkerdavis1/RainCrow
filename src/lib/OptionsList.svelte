@@ -96,7 +96,7 @@
 
     <hr>
     <div class="option-item">
-      <label for="language">Language</label>
+      <label for="language">{$_('options.language')}</label>
       <LocaleSwitcher value={$language} />
     </div>
 
