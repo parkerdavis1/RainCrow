@@ -16,6 +16,6 @@
   },
   "dependencies": {
     "dayjs": "^1.11.5",
-    "svelte-i18n": "^3.4.0"
+    "svelte-i18n": "^3.7.0"
   }
 }
